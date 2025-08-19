@@ -10,11 +10,3 @@ document.write(Sent1 + Sent2);
 
 // Write a simple expression
 document.write(5 + 10);
-
-
-
-
-
-
-
-
