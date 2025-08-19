@@ -1,0 +1,80 @@
+/* Center the calculator vertically and horizontally */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+  background: #333;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  width: 300px;
+}
+
+/* Display */
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
+  text-align: right;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #0f0;
+  padding: 10px;
+  box-shadow: inset 0 4px 5px rgba(0,0,0,0.3);
+}
+
+/* Row container */
+.row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  flex: 1;
+  height: 60px;
+  font-size: 22px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #666;
+  color: #fff;
+  box-shadow: 0 5px #444;
+  transition: all 0.1s;
+}
+
+button:hover {
+  background: #888;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px #444;
+}
+
+/* Operators */
+.operator {
+  background: #0a84ff;
+}
+
+/* Equal button */
+.equal {
+  background: #0f0;
+  color: #000;
+}
+
+/* Clear button */
+.clear {
+  background: #ff3b30;
+}
