@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Basic AJAX Demo</title>
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h2>Get The Latest Content:</h2>
+        <div class="content" id="content">
+            <!-- Button that triggers the AJAX request -->
+            <input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();" />
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Function to load content from content.html using AJAX
+        function getContent() {
+            var xhr = new XMLHttpRequest(); // Create new AJAX request
+
+            // Configure GET request to content.html
+            xhr.open('GET', 'content.html', true);
+
+            // Called when the request is completed successfully
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    // Display the response inside the content div
+                    document.getElementById('content').innerHTML = xhr.responseText;
+                } else {
+                    // Show error if something goes wrong
+                    document.getElementById('content').innerHTML = 'Error: ' + xhr.status;
+                }
+            };
+
+            // Called if the request fails (e.g., network error)
+            xhr.onerror = function() {
+                document.getElementById('content').innerHTML = 'Request failed';
+            };
+
+            // Send the AJAX request
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
+
